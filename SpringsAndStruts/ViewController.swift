@@ -26,8 +26,7 @@ class ViewController: UIViewController {
     }
     
     override func viewWillLayoutSubviews() {
-        if UIDevice.currentDevice().orientation == .LandscapeLeft || UIDevice.currentDevice().orientation == .LandscapeRight {
-            
+        if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
             
             var rect = greenView.frame
             rect.origin.x = 20
@@ -64,6 +63,27 @@ class ViewController: UIViewController {
             rect.size.width = 160
             rect.size.height = 299
             greenView.frame = rect
+            
+            rect = navyView.frame
+            rect.origin.x = 191
+            rect.origin.y = 44
+            rect.size.width = 160
+            rect.size.height = 299
+            navyView.frame = rect
+            
+            rect = blueView.frame
+            rect.origin.x = 25
+            rect.origin.y = 348
+            rect.size.width = 160
+            rect.size.height = 299
+            blueView.frame = rect
+            
+            rect = purpleView.frame
+            rect.origin.x = 191
+            rect.origin.y = 348
+            rect.size.width = 160
+            rect.size.height = 299
+            purpleView.frame = rect
         }
     }
 
